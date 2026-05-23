@@ -1,0 +1,46 @@
+{
+  "name": "chrome-extension-tester-mcp",
+  "version": "1.0.0",
+  "description": "Standard Model Context Protocol (MCP) server to automate, test, and debug Chrome Extensions in real-time directly from AI coding assistants.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "chrome-extension-tester-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "chrome-extension",
+    "playwright",
+    "automation",
+    "debugging",
+    "testing",
+    "devtools",
+    "ai",
+    "cursor"
+  ],
+  "author": "heyitschien",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyitschien/chrome-extension-tester-mcp.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "playwright": "^1.49.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3"
+  }
+}

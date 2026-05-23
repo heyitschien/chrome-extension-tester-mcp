@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Compilation outputs
+dist/
+
+# Local cache & data
+user_data/
+.DS_Store
+*.log
+.env
+.env.*
