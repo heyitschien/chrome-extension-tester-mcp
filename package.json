@@ -10,8 +10,16 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md"
   ],
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://github.com/heyitschien/chrome-extension-tester-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/heyitschien/chrome-extension-tester-mcp/issues"
+  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",

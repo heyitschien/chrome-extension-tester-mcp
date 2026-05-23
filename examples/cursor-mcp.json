@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "chrome-extension-tester": {
+      "command": "npx",
+      "args": ["-y", "chrome-extension-tester-mcp"],
+      "env": {
+        "CHROME_EXTENSION_PATH": "/absolute/path/to/your/extension/dist"
+      }
+    }
+  }
+}
