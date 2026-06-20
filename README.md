@@ -17,12 +17,86 @@
 </p>
 
 <p align="center">
+  <a href="#recruiter-quick-scan">Recruiter Quick Scan</a> ·
   <a href="#-quick-start">Quick Start</a> ·
   <a href="#-ide-setup">IDE Setup</a> ·
   <a href="#-tools">Tools</a> ·
   <a href="#-for-ai-agents">For AI Agents</a> ·
+  <a href="docs/recruiter-notes.md">Recruiter Notes</a> ·
   <a href="CONTRIBUTING.md">Contributing</a>
 </p>
+
+---
+
+## What this is
+
+This repo explores how browser-based workflows and Chrome extensions can be tested through structured automation, with an eye toward **AI-assisted QA and support workflows**.
+
+An MCP (Model Context Protocol) server that gives AI assistants real browser control: launch Chromium with an unpacked extension, capture screenshots, click UI, and read console logs. Published on npm as [`chrome-extension-tester-mcp`](https://www.npmjs.com/package/chrome-extension-tester-mcp).
+
+This is a **working open-source tool** and **concept demo** for repeatable test workflows — not an enterprise QA platform.
+
+---
+
+## Why it matters
+
+Building and supporting Chrome extensions usually means manual reload-click-screenshot loops. Support and QA teams face the same friction when reproducing user issues. This project closes that loop so humans (or AI assistants) can verify, debug, and document extension behavior systematically.
+
+---
+
+## What it demonstrates
+
+- Browser workflow testing with real Chromium + unpacked extensions
+- MCP integration for AI-assisted development and QA
+- Repeatable test workflows (launch → screenshot → logs → interact → close)
+- Open-source dev tooling with CI, docs, and npm publishing
+- QA thinking applied to extension development and support scenarios
+
+---
+
+## Recruiter quick scan
+
+This project demonstrates:
+
+- AI-assisted QA and automation workflow design
+- Chrome extension testing without manual click-through
+- MCP / structured tool integration for repeatable workflows
+- Support-minded debugging (console logs, visual verification)
+- Open-source documentation and developer experience
+- Practical troubleshooting for extension developers and support teams
+
+**Start here:** [Quick Start](#-quick-start) → connect in Cursor → run the [example agent workflow](#example-agent-workflow)
+
+For interview context, see [docs/recruiter-notes.md](docs/recruiter-notes.md).
+
+---
+
+## Walkthrough video
+
+Coming soon: short walkthrough by Chien explaining:
+
+1. What problem this solves
+2. How the workflow works
+3. What decisions were made
+4. How this connects to product support / technical support work
+
+---
+
+## Screenshots / video
+
+- Workflow diagram: [`docs/assets/workflow.svg`](docs/assets/workflow.svg)
+- Test captures: [`docs/screenshots/`](docs/screenshots/) — add more after manual walkthrough pass
+- Banner: [`docs/assets/banner.png`](docs/assets/banner.png)
+
+---
+
+## Notes on privacy / scope
+
+| In scope (public) | Out of scope |
+|---|---|
+| MCP server source, npm package, examples | Private employer or customer extension code |
+| Local testing on your own extensions | Claims of production QA team adoption |
+| CI, contributing guides, issue templates | Credentials or internal support ticket data |
 
 ---
 
