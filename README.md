@@ -18,6 +18,7 @@
 
 <p align="center">
   <a href="#recruiter-quick-scan">Recruiter Quick Scan</a> ·
+  <a href="docs/SUPPORT-USE-CASE.md">Support Use Case</a> ·
   <a href="#-quick-start">Quick Start</a> ·
   <a href="#-ide-setup">IDE Setup</a> ·
   <a href="#-tools">Tools</a> ·
@@ -65,27 +66,30 @@ This project demonstrates:
 - Open-source documentation and developer experience
 - Practical troubleshooting for extension developers and support teams
 
-**Start here:** [Quick Start](#-quick-start) → connect in Cursor → run the [example agent workflow](#example-agent-workflow)
+**Start here:** [docs/SUPPORT-USE-CASE.md](docs/SUPPORT-USE-CASE.md) → [Quick Start](#-quick-start) → connect in Cursor → run the [example agent workflow](#example-agent-workflow)
 
 For interview context, see [docs/recruiter-notes.md](docs/recruiter-notes.md).
 
 ---
 
-## Walkthrough video
+## Support / QA relevance
 
-Coming soon: short walkthrough by Chien explaining:
-
-1. What problem this solves
-2. How the workflow works
-3. What decisions were made
-4. How this connects to product support / technical support work
+| Target role | What this repo proves |
+| --- | --- |
+| Technical Support | Symptom → repro → console logs → escalation note with evidence |
+| QA | Repeatable screenshot + log capture instead of manual click-through |
+| AI workflow operations | MCP tools as structured support instrumentation |
+| Developer support | Extension-specific failure modes (CSP, MV3, packaging) |
+| Product Support | Calm customer status updates while investigation runs |
+| Implementation / Onboarding | First-install experience debugging and setup validation |
 
 ---
 
-## Screenshots / video
+## Screenshots
 
+- Support scenario walkthrough: [`docs/SUPPORT-USE-CASE.md`](docs/SUPPORT-USE-CASE.md)
 - Workflow diagram: [`docs/assets/workflow.svg`](docs/assets/workflow.svg)
-- Test captures: [`docs/screenshots/`](docs/screenshots/) — add more after manual walkthrough pass
+- Test captures: [`docs/screenshots/`](docs/screenshots/)
 - Banner: [`docs/assets/banner.png`](docs/assets/banner.png)
 
 ---
