@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Real execution screenshots and console evidence for the blank-popup support scenario
+- Demo fixtures: `fixtures/sample-extension-working`, `fixtures/sample-extension-blank-popup`
+- `npm run capture-evidence` script (Playwright loop mirroring MCP tools)
+
 ## [1.0.0] - 2026-05-23
 
 ### Added
@@ -15,4 +23,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `CHROME_EXTENSION_PATH` environment variable support
 - Open-source documentation, examples, and GitHub community files
 
+[Unreleased]: https://github.com/heyitschien/chrome-extension-tester-mcp/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/heyitschien/chrome-extension-tester-mcp/releases/tag/v1.0.0

@@ -1,0 +1,10 @@
+# blank-popup console capture
+Captured: 2026-07-19T02:50:52.828Z
+Extension: fixtures/sample-extension-blank-popup
+Tool loop: launch_browser → take_extension_screenshot → get_browser_logs → close_browser
+[error] [sample-blank] Uncaught TypeError: Cannot read properties of undefined (reading 'mount')
+[error] [sample-blank] Uncaught TypeError: Cannot read properties of undefined (reading 'mount')
+[error] [sample-blank] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'self'"
+[error] [sample-blank] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'self'"
+[pageerror] Service worker registration failed: Extension context invalidated during popup boot (synthetic SAMPLE-EXT-001)
+[pageerror] Service worker registration failed: Extension context invalidated during popup boot (synthetic SAMPLE-EXT-001)

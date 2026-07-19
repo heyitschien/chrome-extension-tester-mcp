@@ -1,9 +1,10 @@
 # Support Use Case — Blank Extension Popup
 
 **Tool:** [chrome-extension-tester-mcp](https://github.com/heyitschien/chrome-extension-tester-mcp)  
-**Type:** Synthetic support scenario — illustrates technical support / QA workflow
+**Type:** Synthetic support scenario — illustrates technical support / QA workflow  
+**Evidence:** Real screenshots + console captures from the MCP tool loop (see below)
 
-This scenario shows how I would use structured browser automation to investigate a common Chrome extension report. No real customer data.
+This scenario shows how structured browser automation investigates a common Chrome extension report. No real customer data.
 
 ---
 
@@ -28,7 +29,7 @@ This scenario shows how I would use structured browser automation to investigate
 | --- | --- |
 | 1 | Confirm extension version and install source (Store vs unpacked dev build) |
 | 2 | Launch clean Chromium profile with extension loaded |
-| 3 | Open popup via toolbar icon |
+| 3 | Open popup via toolbar icon / `chrome-extension://…/popup.html` |
 | 4 | Capture screenshot of blank state |
 | 5 | Capture console logs from popup and service worker |
 | 6 | Compare MV3 manifest permissions vs required host permissions |
@@ -39,21 +40,54 @@ This scenario shows how I would use structured browser automation to investigate
 ## MCP workflow (support / QA)
 
 ```text
-launch_browser     → extensionPath: "dist", headful for visual check
+launch_browser     → extensionPath: "fixtures/sample-extension-blank-popup"
 take_extension_screenshot → filename: "docs/screenshots/blank-popup-repro.png"
 get_browser_logs     → filter for CSP, MV3 service worker, uncaught exceptions
-click_element        → if popup has hidden mount point, verify selector
 close_browser        → clean up session
 ```
 
-**Example agent loop:**
+Replay the same loop locally without an IDE:
 
+```bash
+npm run capture-evidence
 ```
-1. launch_browser  →  extensionPath: "dist"
-2. take_extension_screenshot  →  "docs/screenshots/blank-popup-repro.png"
-3. get_browser_logs  →  look for "Refused to load", "Service worker registration failed"
-4. close_browser
+
+---
+
+## Captured evidence (real run)
+
+### Healthy baseline (working fixture)
+
+<p align="center">
+  <img src="./screenshots/popup-working.png" alt="Working sample extension popup with Service worker OK status" width="320" />
+</p>
+
+Console excerpt ([full log](./evidence/working-console.txt)):
+
+```text
+[log] [sample-working] popup loaded
+[log] [sample-working] ping response {ok: true, at: …}
 ```
+
+### Blank popup repro (support fixture)
+
+<p align="center">
+  <img src="./screenshots/blank-popup-repro.png" alt="Blank white extension popup reproduction" width="320" />
+</p>
+
+Console excerpt ([full log](./evidence/blank-popup-console.txt)):
+
+```text
+[error] [sample-blank] Uncaught TypeError: Cannot read properties of undefined (reading 'mount')
+[error] [sample-blank] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'self'"
+[pageerror] Service worker registration failed: Extension context invalidated during popup boot (synthetic SAMPLE-EXT-001)
+```
+
+Browser session after launch ([working-browser-loaded.png](./screenshots/working-browser-loaded.png)):
+
+<p align="center">
+  <img src="./screenshots/working-browser-loaded.png" alt="Chromium launched with extension context on example.com" width="720" />
+</p>
 
 ---
 
@@ -84,27 +118,30 @@ close_browser        → clean up session
 ## Escalation — blank popup after install
 
 **Reporter:** Synthetic SAMPLE-EXT-001
-**Environment:** Chrome 124, Windows 11, Chrome Web Store install
+**Environment:** Chrome / Chromium via MCP capture, synthetic fixture
 **Symptom:** Popup renders blank (white screen), no console UI visible to user
 
 ### Reproduction
-- Loaded unpacked build from release `dist/` — reproduces
+- Loaded unpacked fixture: fixtures/sample-extension-blank-popup
 - Screenshot: docs/screenshots/blank-popup-repro.png
-- Console: [paste relevant CSP / SW errors from get_browser_logs]
+- Console: docs/evidence/blank-popup-console.txt
+  - TypeError on mount
+  - CSP script-src 'self' refusal
+  - Service worker registration failure (synthetic)
 
 ### Ruled out
-- [ ] User loading wrong folder (confirmed Store install)
-- [ ] Conflicting extension (repro in clean profile)
+- [x] Conflicting extension (clean Playwright profile)
+- [x] Missing screenshot/log evidence (captured below)
 
 ### Suspected layer
-- MV3 service worker registration / CSP on popup script
+- Popup boot / CSP / service worker registration
 
 ### Customer impact
 - Medium — blocks first-use onboarding
 - Workaround: none confirmed
 
 ### Ask engineering
-- Confirm CSP policy in popup bundle for Chrome 124
+- Confirm CSP policy in popup bundle
 - Verify service worker entry in manifest v3
 ```
 
@@ -126,5 +163,8 @@ close_browser        → clean up session
 ## Related files
 
 - [README](../README.md) — Quick Start and tool reference
+- [docs/screenshots/README.md](./screenshots/README.md) — Screenshot gallery
+- [docs/evidence/](./evidence/) — Console captures + capture summary
+- [fixtures/](../fixtures/) — Working and blank-popup demo extensions
 - [docs/recruiter-notes.md](./recruiter-notes.md) — Interview context
 - [docs/assets/workflow.svg](./assets/workflow.svg) — MCP workflow diagram

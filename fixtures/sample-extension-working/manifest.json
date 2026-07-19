@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Sample Extension (Working)",
+  "version": "1.0.0",
+  "description": "Demo fixture for chrome-extension-tester-mcp screenshots — healthy popup.",
+  "action": {
+    "default_title": "Sample Working",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sample Blank Popup</title>
+    <style>
+      /* Intentionally minimal — JS boot failure leaves a blank white surface */
+      html,
+      body {
+        margin: 0;
+        width: 280px;
+        height: 160px;
+        background: #ffffff;
+      }
+      #app {
+        display: none;
+        padding: 16px;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>This UI should never appear</h1>
+      <p>If you see this, the blank-popup repro fixture is wrong.</p>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

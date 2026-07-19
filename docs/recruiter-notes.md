@@ -8,11 +8,12 @@ It shows I can build practical tooling, document it for other developers, and th
 
 ## What to look at first
 
-1. **[README](../README.md) — Recruiter quick scan** — one-minute overview of value and skills.
-2. **[Quick Start](../README.md#-quick-start)** — `npx -y chrome-extension-tester-mcp` to run instantly.
-3. **[Tools table](../README.md#tools)** — what the server can do (launch, screenshot, click, logs).
-4. **[Example agent workflow](../README.md#example-agent-workflow)** — the repeatable test loop.
+1. **[SUPPORT-USE-CASE.md](./SUPPORT-USE-CASE.md)** — blank-popup support scenario with **real screenshots + console logs**.
+2. **[Screenshot gallery](./screenshots/README.md)** — healthy popup vs blank repro side by side.
+3. **[README](../README.md) — Recruiter quick scan** — one-minute overview of value and skills.
+4. **[Tools table](../README.md#tools)** — launch, screenshot, click, logs.
 5. **`examples/cursor-mcp.json`** — ready-made MCP config for Cursor.
+6. **`npm run capture-evidence`** — regenerate the same evidence locally.
 
 ## What is intentionally out of scope
 
