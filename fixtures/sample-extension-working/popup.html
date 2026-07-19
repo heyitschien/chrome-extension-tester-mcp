@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sample Working Popup</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        margin: 0;
+        padding: 16px;
+        width: 280px;
+        background: #f7f4ef;
+        color: #1c1917;
+      }
+      h1 {
+        font-size: 16px;
+        margin: 0 0 8px;
+      }
+      p {
+        font-size: 13px;
+        margin: 0 0 12px;
+        line-height: 1.4;
+      }
+      .status {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 6px;
+        background: #dcfce7;
+        color: #166534;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      button {
+        width: 100%;
+        padding: 8px 10px;
+        border: 0;
+        border-radius: 8px;
+        background: #1c1917;
+        color: #fafaf9;
+        font-size: 13px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sample Extension</h1>
+    <p>Healthy popup used for MCP screenshot evidence.</p>
+    <p><span class="status" id="status">UI loaded</span></p>
+    <button id="ping" type="button">Ping service worker</button>
+    <script src="popup.js"></script>
+  </body>
+</html>

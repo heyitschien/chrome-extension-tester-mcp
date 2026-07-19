@@ -66,9 +66,16 @@ This project demonstrates:
 - Open-source documentation and developer experience
 - Practical troubleshooting for extension developers and support teams
 
-**Start here:** [docs/SUPPORT-USE-CASE.md](docs/SUPPORT-USE-CASE.md) → [Quick Start](#-quick-start) → connect in Cursor → run the [example agent workflow](#example-agent-workflow)
+**Start here:** [docs/SUPPORT-USE-CASE.md](docs/SUPPORT-USE-CASE.md) (includes real screenshots + console logs) → [Quick Start](#-quick-start) → connect in Cursor → run the [example agent workflow](#example-agent-workflow)
 
 For interview context, see [docs/recruiter-notes.md](docs/recruiter-notes.md).
+
+<p align="center">
+  <img src="docs/screenshots/popup-working.png" alt="Working extension popup — Service worker OK" width="280" />
+  &nbsp;&nbsp;
+  <img src="docs/screenshots/blank-popup-repro.png" alt="Blank popup reproduction — white screen" width="280" />
+</p>
+<p align="center"><em>Left: healthy popup evidence · Right: blank-popup support repro (synthetic)</em></p>
 
 ---
 
@@ -87,10 +94,17 @@ For interview context, see [docs/recruiter-notes.md](docs/recruiter-notes.md).
 
 ## Screenshots
 
-- Support scenario walkthrough: [`docs/SUPPORT-USE-CASE.md`](docs/SUPPORT-USE-CASE.md)
-- Workflow diagram: [`docs/assets/workflow.svg`](docs/assets/workflow.svg)
-- Test captures: [`docs/screenshots/`](docs/screenshots/)
-- Banner: [`docs/assets/banner.png`](docs/assets/banner.png)
+Real execution captures from the MCP tool loop (regenerate with `npm run capture-evidence`):
+
+| Capture | Link |
+| --- | --- |
+| Working popup | [`docs/screenshots/popup-working.png`](docs/screenshots/popup-working.png) |
+| Blank popup repro | [`docs/screenshots/blank-popup-repro.png`](docs/screenshots/blank-popup-repro.png) |
+| Browser session | [`docs/screenshots/working-browser-loaded.png`](docs/screenshots/working-browser-loaded.png) |
+| Console logs | [`docs/evidence/`](docs/evidence/) |
+| Support walkthrough | [`docs/SUPPORT-USE-CASE.md`](docs/SUPPORT-USE-CASE.md) |
+| Workflow diagram | [`docs/assets/workflow.svg`](docs/assets/workflow.svg) |
+| Demo fixtures | [`fixtures/`](fixtures/) |
 
 ---
 

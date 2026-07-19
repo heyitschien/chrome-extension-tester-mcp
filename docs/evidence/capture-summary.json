@@ -1,0 +1,14 @@
+{
+  "capturedAt": "2026-07-19T02:50:52.829Z",
+  "method": "Playwright persistent Chromium + --load-extension (same approach as MCP launch_browser)",
+  "artifacts": [
+    "docs/screenshots/working-browser-loaded.png",
+    "docs/screenshots/popup-working.png",
+    "docs/screenshots/blank-popup-browser-loaded.png",
+    "docs/screenshots/blank-popup-repro.png",
+    "docs/evidence/working-console.txt",
+    "docs/evidence/blank-popup-console.txt"
+  ],
+  "blankPopupLogCount": 6,
+  "workingLogCount": 4
+}

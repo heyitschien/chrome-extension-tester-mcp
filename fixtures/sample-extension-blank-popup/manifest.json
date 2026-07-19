@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Sample Extension (Blank Popup Repro)",
+  "version": "1.0.0",
+  "description": "Demo fixture that intentionally fails popup boot — blank white UI + console errors.",
+  "action": {
+    "default_title": "Sample Blank Popup",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

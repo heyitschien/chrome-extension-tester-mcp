@@ -1,0 +1,8 @@
+# working console capture
+Captured: 2026-07-19T02:50:50.561Z
+Extension: fixtures/sample-extension-working
+Tool loop: launch_browser → take_extension_screenshot → get_browser_logs → close_browser
+[log] [sample-working] popup loaded
+[log] [sample-working] popup loaded
+[log] [sample-working] ping response {ok: true, at: 2026-07-19T02:50:49.854Z}
+[log] [sample-working] ping response {ok: true, at: 2026-07-19T02:50:49.854Z}
