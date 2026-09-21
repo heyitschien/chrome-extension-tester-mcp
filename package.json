@@ -1,7 +1,7 @@
 {
   "name": "chrome-extension-tester-mcp",
   "version": "1.0.0",
-  "description": "Standard Model Context Protocol (MCP) server to automate, test, and debug Chrome Extensions in real-time directly from AI coding assistants.",
+  "description": "MCP server that launches headful Chromium with an unpacked Chrome extension so AI assistants can screenshot, click, and read console logs.",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
